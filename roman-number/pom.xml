@@ -27,6 +27,16 @@
     </dependency>
   </dependencies>
 
+  <reporting>
+      <plugins>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.8</version>
+        </plugin>
+      </plugins>
+    </reporting>
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -87,6 +97,27 @@
             <phase>package</phase>
             <goals>
               <goal>checkstyle</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    <!--configurazione di Jacoco-->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>report</goal>
             </goals>
           </execution>
         </executions>
