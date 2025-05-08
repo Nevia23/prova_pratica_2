@@ -7,110 +7,110 @@ package it.unipd.mtss;
 <span class="nc" id="L7">public class IntegerToRoman {</span>
     public static String convert(int number) {
 
-<span class="nc bnc" id="L10" title="All 4 branches missed.">        if (number &lt; 1 || number &gt; 1000) {</span>
-<span class="nc" id="L11">            throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 1000&quot;);</span>
+<span class="fc bfc" id="L10" title="All 4 branches covered.">        if (number &lt; 1 || number &gt; 1000) {</span>
+<span class="fc" id="L11">            throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 1000&quot;);</span>
         }
 
-<span class="nc bnc" id="L14" title="All 2 branches missed.">        if (number == 1000) {</span>
-<span class="nc" id="L15">            return &quot;M&quot;;</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (number == 1000) {</span>
+<span class="fc" id="L15">            return &quot;M&quot;;</span>
         }
 
-<span class="nc" id="L18">        String roman = &quot;&quot;;</span>
-<span class="nc" id="L19">        int centinaia = number / 100;</span>
-<span class="nc" id="L20">        int decine = (number % 100) / 10;</span>
-<span class="nc" id="L21">        int unita = number % 10;</span>
+<span class="fc" id="L18">        String roman = &quot;&quot;;</span>
+<span class="fc" id="L19">        int centinaia = number / 100;</span>
+<span class="fc" id="L20">        int decine = (number % 100) / 10;</span>
+<span class="fc" id="L21">        int unita = number % 10;</span>
 
-<span class="nc bnc" id="L23" title="All 10 branches missed.">        switch (centinaia) {</span>
+<span class="fc bfc" id="L23" title="All 10 branches covered.">        switch (centinaia) {</span>
             case 1:
-<span class="nc" id="L25">                roman += &quot;C&quot;;</span>
-<span class="nc" id="L26">                break;</span>
+<span class="fc" id="L25">                roman += &quot;C&quot;;</span>
+<span class="fc" id="L26">                break;</span>
             case 2:
-<span class="nc" id="L28">                roman += &quot;CC&quot;;</span>
-<span class="nc" id="L29">                break;</span>
+<span class="fc" id="L28">                roman += &quot;CC&quot;;</span>
+<span class="fc" id="L29">                break;</span>
             case 3:
-<span class="nc" id="L31">                roman += &quot;CCC&quot;;</span>
-<span class="nc" id="L32">                break;</span>
+<span class="fc" id="L31">                roman += &quot;CCC&quot;;</span>
+<span class="fc" id="L32">                break;</span>
             case 4:
-<span class="nc" id="L34">                roman += &quot;CD&quot;;</span>
-<span class="nc" id="L35">                break;</span>
+<span class="fc" id="L34">                roman += &quot;CD&quot;;</span>
+<span class="fc" id="L35">                break;</span>
             case 5:
-<span class="nc" id="L37">                roman += &quot;D&quot;;</span>
-<span class="nc" id="L38">                break;</span>
+<span class="fc" id="L37">                roman += &quot;D&quot;;</span>
+<span class="fc" id="L38">                break;</span>
             case 6:
-<span class="nc" id="L40">                roman += &quot;DC&quot;;</span>
-<span class="nc" id="L41">                break;</span>
+<span class="fc" id="L40">                roman += &quot;DC&quot;;</span>
+<span class="fc" id="L41">                break;</span>
             case 7:
-<span class="nc" id="L43">                roman += &quot;DCC&quot;;</span>
-<span class="nc" id="L44">                break;</span>
+<span class="fc" id="L43">                roman += &quot;DCC&quot;;</span>
+<span class="fc" id="L44">                break;</span>
             case 8:
-<span class="nc" id="L46">                roman += &quot;DCCC&quot;;</span>
-<span class="nc" id="L47">                break;</span>
+<span class="fc" id="L46">                roman += &quot;DCCC&quot;;</span>
+<span class="fc" id="L47">                break;</span>
             case 9:
-<span class="nc" id="L49">                roman += &quot;CM&quot;;</span>
+<span class="fc" id="L49">                roman += &quot;CM&quot;;</span>
                 break;
         }
 
-<span class="nc bnc" id="L53" title="All 10 branches missed.">        switch (decine) {</span>
+<span class="fc bfc" id="L53" title="All 10 branches covered.">        switch (decine) {</span>
             case 1:
-<span class="nc" id="L55">                roman += &quot;X&quot;;</span>
-<span class="nc" id="L56">                break;</span>
+<span class="fc" id="L55">                roman += &quot;X&quot;;</span>
+<span class="fc" id="L56">                break;</span>
             case 2:
-<span class="nc" id="L58">                roman += &quot;XX&quot;;</span>
-<span class="nc" id="L59">                break;</span>
+<span class="fc" id="L58">                roman += &quot;XX&quot;;</span>
+<span class="fc" id="L59">                break;</span>
             case 3:
-<span class="nc" id="L61">                roman += &quot;XXX&quot;;</span>
-<span class="nc" id="L62">                break;</span>
+<span class="fc" id="L61">                roman += &quot;XXX&quot;;</span>
+<span class="fc" id="L62">                break;</span>
             case 4:
-<span class="nc" id="L64">                roman += &quot;XL&quot;;</span>
-<span class="nc" id="L65">                break;</span>
+<span class="fc" id="L64">                roman += &quot;XL&quot;;</span>
+<span class="fc" id="L65">                break;</span>
             case 5:
-<span class="nc" id="L67">                roman += &quot;L&quot;;</span>
-<span class="nc" id="L68">                break;</span>
+<span class="fc" id="L67">                roman += &quot;L&quot;;</span>
+<span class="fc" id="L68">                break;</span>
             case 6:
-<span class="nc" id="L70">                roman += &quot;LX&quot;;</span>
-<span class="nc" id="L71">                break;</span>
+<span class="fc" id="L70">                roman += &quot;LX&quot;;</span>
+<span class="fc" id="L71">                break;</span>
             case 7:
-<span class="nc" id="L73">                roman += &quot;LXX&quot;;</span>
-<span class="nc" id="L74">                break;</span>
+<span class="fc" id="L73">                roman += &quot;LXX&quot;;</span>
+<span class="fc" id="L74">                break;</span>
             case 8:
-<span class="nc" id="L76">                roman += &quot;LXXX&quot;;</span>
-<span class="nc" id="L77">                break;</span>
+<span class="fc" id="L76">                roman += &quot;LXXX&quot;;</span>
+<span class="fc" id="L77">                break;</span>
             case 9:
-<span class="nc" id="L79">                roman += &quot;XC&quot;;</span>
+<span class="fc" id="L79">                roman += &quot;XC&quot;;</span>
                 break;
         }
 
-<span class="nc bnc" id="L83" title="All 10 branches missed.">        switch (unita) {</span>
+<span class="fc bfc" id="L83" title="All 10 branches covered.">        switch (unita) {</span>
             case 1:
-<span class="nc" id="L85">                roman += &quot;I&quot;;</span>
-<span class="nc" id="L86">                break;</span>
+<span class="fc" id="L85">                roman += &quot;I&quot;;</span>
+<span class="fc" id="L86">                break;</span>
             case 2:
-<span class="nc" id="L88">                roman += &quot;II&quot;;</span>
-<span class="nc" id="L89">                break;</span>
+<span class="fc" id="L88">                roman += &quot;II&quot;;</span>
+<span class="fc" id="L89">                break;</span>
             case 3:
-<span class="nc" id="L91">                roman += &quot;III&quot;;</span>
-<span class="nc" id="L92">                break;</span>
+<span class="fc" id="L91">                roman += &quot;III&quot;;</span>
+<span class="fc" id="L92">                break;</span>
             case 4:
-<span class="nc" id="L94">                roman += &quot;IV&quot;;</span>
-<span class="nc" id="L95">                break;</span>
+<span class="fc" id="L94">                roman += &quot;IV&quot;;</span>
+<span class="fc" id="L95">                break;</span>
             case 5:
-<span class="nc" id="L97">                roman += &quot;V&quot;;</span>
-<span class="nc" id="L98">                break;</span>
+<span class="fc" id="L97">                roman += &quot;V&quot;;</span>
+<span class="fc" id="L98">                break;</span>
             case 6:
-<span class="nc" id="L100">                roman += &quot;VI&quot;;</span>
-<span class="nc" id="L101">                break;</span>
+<span class="fc" id="L100">                roman += &quot;VI&quot;;</span>
+<span class="fc" id="L101">                break;</span>
             case 7:
-<span class="nc" id="L103">                roman += &quot;VII&quot;;</span>
-<span class="nc" id="L104">                break;</span>
+<span class="fc" id="L103">                roman += &quot;VII&quot;;</span>
+<span class="fc" id="L104">                break;</span>
             case 8:
-<span class="nc" id="L106">                roman += &quot;VIII&quot;;</span>
-<span class="nc" id="L107">                break;</span>
+<span class="fc" id="L106">                roman += &quot;VIII&quot;;</span>
+<span class="fc" id="L107">                break;</span>
             case 9:
-<span class="nc" id="L109">                roman += &quot;IX&quot;;</span>
+<span class="fc" id="L109">                roman += &quot;IX&quot;;</span>
                 break;
         }
 
-<span class="nc" id="L113">        return roman;</span>
+<span class="fc" id="L113">        return roman;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
