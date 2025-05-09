@@ -8,11 +8,34 @@ package it.unipd.mtss;
  * Hello world!
  *
  */
-<span class="nc" id="L11">public class App </span>
-{
-    public static void main( String[] args )
-    {
-<span class="nc" id="L15">        System.out.println( &quot;Hello World!&quot; );</span>
-<span class="nc" id="L16">    }</span>
+// public class App 
+// {
+//     public static void main( String[] args )
+//     {
+//         System.out.println( &quot;Hello World!&quot; );
+//     }
+// }
+
+
+import java.util.Scanner;
+import it.unipd.mtss.IntegerToRoman;
+
+<span class="nc" id="L23">public class App {</span>
+    public static void main(String[] args) {
+<span class="fc" id="L25">        System.out.println(&quot;Inserisci un numero da 1 a 1000:&quot;);</span>
+<span class="fc" id="L26">        Scanner s = new Scanner(System.in);</span>
+
+        try {
+<span class="fc" id="L29">            int numero = s.nextInt();</span>
+<span class="fc" id="L30">            String romano = IntegerToRoman.convert(numero);</span>
+<span class="fc" id="L31">            System.out.println(&quot;Numero romano: &quot; + romano);</span>
+<span class="fc" id="L32">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L33">            System.out.println(&quot;Errore: &quot; + e.getMessage());</span>
+<span class="nc" id="L34">        } catch (Exception e) {</span>
+<span class="nc" id="L35">            System.out.println(&quot;Errore generico: &quot; + e.getMessage());</span>
+<span class="fc" id="L36">        }</span>
+
+<span class="fc" id="L38">        s.close();</span>
+<span class="fc" id="L39">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
