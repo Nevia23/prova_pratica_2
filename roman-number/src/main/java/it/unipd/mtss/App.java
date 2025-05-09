@@ -4,21 +4,7 @@
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
-/**
- * Hello world!
- *
- */
-// public class App 
-// {
-//     public static void main( String[] args )
-//     {
-//         System.out.println( "Hello World!" );
-//     }
-// }
-
-
 import java.util.Scanner;
-import it.unipd.mtss.IntegerToRoman;
 
 public class App {
     public static void main(String[] args) {
