@@ -4,38 +4,29 @@
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
-/**
- * Hello world!
- *
- */
-// public class App 
-// {
-//     public static void main( String[] args )
-//     {
-//         System.out.println( &quot;Hello World!&quot; );
-//     }
-// }
-
-
 import java.util.Scanner;
-import it.unipd.mtss.IntegerToRoman;
 
-<span class="nc" id="L23">public class App {</span>
+<span class="nc" id="L9">public class App {</span>
     public static void main(String[] args) {
-<span class="fc" id="L25">        System.out.println(&quot;Inserisci un numero da 1 a 1000:&quot;);</span>
-<span class="fc" id="L26">        Scanner s = new Scanner(System.in);</span>
+<span class="fc" id="L11">        System.out.println(&quot;Inserisci un numero da 1 a 1000:&quot;);</span>
+<span class="fc" id="L12">        Scanner s = new Scanner(System.in);</span>
 
         try {
-<span class="fc" id="L29">            int numero = s.nextInt();</span>
-<span class="fc" id="L30">            String romano = IntegerToRoman.convert(numero);</span>
-<span class="fc" id="L31">            System.out.println(&quot;Numero romano: &quot; + romano);</span>
-<span class="fc" id="L32">        } catch (IllegalArgumentException e) {</span>
-<span class="fc" id="L33">            System.out.println(&quot;Errore: &quot; + e.getMessage());</span>
-<span class="nc" id="L34">        } catch (Exception e) {</span>
-<span class="nc" id="L35">            System.out.println(&quot;Errore generico: &quot; + e.getMessage());</span>
-<span class="fc" id="L36">        }</span>
+<span class="fc" id="L15">            int numero = s.nextInt();</span>
+<span class="fc" id="L16">            String romano = IntegerToRoman.convert(numero);</span>
+<span class="fc" id="L17">            System.out.println(&quot;Numero romano: &quot; + romano);</span>
 
-<span class="fc" id="L38">        s.close();</span>
-<span class="fc" id="L39">    }</span>
+<span class="fc" id="L19">            String asciiArt = RomanPrinter.print(numero);</span>
+<span class="fc" id="L20">            System.out.println(&quot;Arte ASCII del numero romano:&quot;);</span>
+<span class="fc" id="L21">            System.out.println(asciiArt);</span>
+
+<span class="fc" id="L23">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L24">            System.out.println(&quot;Errore: &quot; + e.getMessage());</span>
+<span class="nc" id="L25">        } catch (Exception e) {</span>
+<span class="nc" id="L26">            System.out.println(&quot;Errore generico: &quot; + e.getMessage());</span>
+<span class="fc" id="L27">        }</span>
+
+<span class="fc" id="L29">        s.close();</span>
+<span class="fc" id="L30">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
