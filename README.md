@@ -5,3 +5,4 @@ Sviluppatore 2: Nicholas Moretto
 ![Build](https://github.com/Nevia23/prova_pratica_2/actions/workflows/build.yml/badge.svg)
 
 - Copertura dei test (JaCoCo): generata automaticamente e disponibile nei [report di build](https://github.com/Nevia23/prova_pratica_2/actions)
+- 📁 Report completo disponibile in: `target/site/jacoco/index.html`
