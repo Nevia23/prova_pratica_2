@@ -15,6 +15,11 @@ public class App {
             int numero = s.nextInt();
             String romano = IntegerToRoman.convert(numero);
             System.out.println("Numero romano: " + romano);
+
+            String asciiArt = RomanPrinter.print(numero);
+            System.out.println("Arte ASCII del numero romano:");
+            System.out.println(asciiArt);
+
         } catch (IllegalArgumentException e) {
             System.out.println("Errore: " + e.getMessage());
         } catch (Exception e) {
