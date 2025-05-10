@@ -73,7 +73,8 @@ public class RomanPrinter {
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
     }
-    private static String printAsciiArt(String romanNumber){
+    
+    static String printAsciiArt(String romanNumber){
         StringBuilder[] righe = new StringBuilder[6];
         for (int i = 0; i < 6; i++) {
             righe[i] = new StringBuilder();
